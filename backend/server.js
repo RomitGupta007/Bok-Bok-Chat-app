@@ -11,6 +11,9 @@ const path = require('path')
 dotenv.config();
 connectDB();
 var app = express()
+app.get('/',(req,res)=>{
+   res.send("It's Romit")
+})
 app.use(cors())
 app.use(express.json())
 app.use('/api/user',userRoutes)
